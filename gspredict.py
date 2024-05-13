@@ -8,26 +8,26 @@ from scipy.sparse import hstack
 from scipy.sparse import coo_matrix, csr_matrix
 
 # the data
-data_path = r"D:\intership\final\Video_Games.xls"
+data_path = r"mod_video_games.csv"
 dataset = pd.read_csv(data_path)
 
 # Load prefitted classification model
-link = r"D:\intership\final\model_classification.pkl"
+link = r"model_classification.pkl"
 with open(link, 'rb') as model_file:
         classifier = pickle.load(model_file)
 
 # Load pre-fitted OneHotEncoder
-enc_link = r"D:\intership\final\encoder (1).pkl"
+enc_link = r"encoder (1).pkl"
 with open(enc_link, 'rb') as enc_file:
         enc = pickle.load(enc_file)
 
 # Load prefitted regression model
-reg_link = r"D:\intership\final\regression_model.pkl"
+reg_link = r"regression_model.pkl"
 with open(reg_link, 'rb') as reg_file:
         regressor = pickle.load(reg_file)
 
 # Load prefitted Label Encoder
-le_link = r"D:\intership\final\label_encoder.pkl"
+le_link = r"label_encoder.pkl"
 with open(le_link, 'rb') as label_file:
         le = pickle.load(label_file)
 
